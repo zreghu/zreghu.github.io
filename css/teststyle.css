@@ -1,0 +1,105 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  overflow: hidden;
+  font-family: 'Montserrat', regular;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: 'Montserrat', regular;
+  font-size: 3rem;
+}
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 10vw; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #545373; /* Custom Color */
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+.sidenavtext {
+  height: 95%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* The navigation menu links */
+.sidenavtext a {
+  padding: 6px 8px 6px 25px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #E9F1F2; /*Custom Color to complement*/
+  display: block;
+  font-family: 'Barlow', regular;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #6D86A6;
+}
+
+/* Style page content */
+.main {
+  position: absolute;
+  border-width: 0;
+  top: 0;
+  width: 90vw;
+  left: 10vw;
+}
+
+.scrollsnap::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollsnap {
+  scroll-snap-type: y mandatory;
+  border: 2px solid var(--gs0);
+  height: 100vh;
+  overflow: scroll;
+  border-width: 0;
+}
+
+.scrollsnap div {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  scroll-snap-align: start none;
+  font-family: 'Montserrat', regular;
+}
+.scrollsnap div:nth-child(1) {
+  background: white;
+}
+.scrollsnap div:nth-child(2) {
+  background: azure;
+}
+.scrollsnap div:nth-child(3) {
+  background: #E9F1F2;
+}
+.scrollsnap div:nth-child(4) {
+  background: #6D86A6;
+  color: white;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
